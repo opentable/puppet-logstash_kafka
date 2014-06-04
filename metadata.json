@@ -1,0 +1,33 @@
+{
+    "operatingsystem_support": [
+        { "operatingsystem": "Debian" },
+        { "operatingsystem": "Ubuntu" },
+        { "operatingsystem": "RedHat" },
+        { "operatingsystem": "CentOS" },
+        { "operatingsystem": "Windows" }
+    ],
+    "requirements": [
+        {
+            "name": "pe",
+            "version_requirement": "3.2.x"
+        },
+        {
+            "name": "puppet",
+            "version_requirement": "3.x"
+        }
+    ],
+    "name":         "opentable-logstash_kafka",
+    "version":      "0.1.4",
+    "source":       "git://github.com/opentable/puppet-logstash_kafka.git",
+    "author":       "opentable",
+    "summary":      "Module for managing the installation the kafka plugin for logstash",
+    "description":  "Install logstash-kafka plugin to allow you to use kafka as a input/output to/from logstash",
+    "project_page": "https://github.com/opentable/puppet-logstash_kafka",
+    "license":      "MIT",
+    "dependencies": [
+        {
+            "name": "puppetlabs/stdlib",
+            "version_requirement": ">= 3.0.0"
+        }
+    ]
+}

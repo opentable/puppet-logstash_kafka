@@ -1,0 +1,9 @@
+fixtures:
+  repositories:
+    stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib"
+    java: "https://github.com/puppetlabs/puppetlabs-java"
+    kafka: "https://github.com/opentable/puppet-kafka"
+    logstash: "https://github.com/elasticsearch/puppet-logstash"
+    file_concat: "https://github.com/electrical/puppet-lib-file_concat"
+  symlinks:
+    logstash_kafka: "#{source_dir}"

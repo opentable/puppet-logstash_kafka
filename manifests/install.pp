@@ -69,21 +69,21 @@ class logstash_kafka::install(
   }
 
   file { "${logstash_install_dir}/vendor/jar/kafka/libs":
-    ensure => link,
-    target => "${kafka_install_dir}/libs",
+    ensure  => link,
+    target  => "${kafka_install_dir}/libs",
     require => File["${logstash_install_dir}/vendor/jar/kafka"]
   }
 
 #logstash::plugin
   file { "${logstash_install_dir}/lib/logstash/inputs/kafka.rb":
-    ensure => link,
-    target => "${install_dir}/lib/logstash/inputs/kafka.rb",
+    ensure  => link,
+    target  => "${install_dir}/lib/logstash/inputs/kafka.rb",
     require => Class['logstash']
   }
 
   file { "${logstash_install_dir}/lib/logstash/outputs/kafka.rb":
-    ensure => link,
-    target => "${install_dir}/lib/logstash/outputs/kafka.rb",
+    ensure  => link,
+    target  => "${install_dir}/lib/logstash/outputs/kafka.rb",
     require => Class['logstash']
   }
 }

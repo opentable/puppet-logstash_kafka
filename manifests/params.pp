@@ -7,6 +7,6 @@ class logstash_kafka::params {
   $version = '0.5.1'
   $jruby_kafka_version = '0.1.1'
   $install_dir = '/opt/logstash-kafka'
-  $kafka_install_dir = '/usr/local/kafka'
+  $kafka_install_dir = '/opt/kafka'
   $logstash_install_dir = '/opt/logstash'
 }

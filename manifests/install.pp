@@ -54,7 +54,7 @@ class logstash_kafka::install
     unless      => "/usr/bin/test -d ${logstash_kafka::logstash_install_dir}/vendor/bundle/jruby/1.9/gems/jruby-kafka-0.1.0"
   }
 
-  file { $install_dir:
+  file { $logstash_kafka::install_dir:
     ensure => link,
     target => "${logstash_kafka::install_dir}-${logstash_kafka::version}"
   }

@@ -44,7 +44,7 @@ class logstash_kafka::install
   exec { 'untar-logstash-kafka':
     command => "/bin/tar -xvzf /tmp/logstash-kafka-v${logstash_kafka::version}.tar.gz -C ${logstash_kafka::install_dir}-${logstash_kafka::version} --strip-components=1",
     unless  => "/usr/bin/test -d ${logstash_kafka::install_dir}-${logstash_kafka::version}/lib",
-    require => [ File["${logstash_kafka::install_dir}-${version}"], Exec['download-logstash-kafka'] ]
+    require => [ File["${logstash_kafka::install_dir}-${logstash_kafka::version}"], Exec['download-logstash-kafka'] ]
   }
 
   exec { 'install-jruby-kafka':

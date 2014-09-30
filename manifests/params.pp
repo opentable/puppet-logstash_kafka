@@ -9,4 +9,5 @@ class logstash_kafka::params {
   $install_dir = '/opt/logstash-kafka'
   $kafka_install_dir = '/opt/kafka'
   $logstash_install_dir = '/opt/logstash'
+  $logstash_package_url = ''
 }

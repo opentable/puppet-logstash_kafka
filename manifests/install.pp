@@ -1,6 +1,7 @@
-# == Class logstash_kafka::install
+# == Class: logstash_kafka::install
 #
-# This class is meant to be called from logstash_kafka
+# This private class is meant to be called from `logstash_kafka`.
+# It downloads and installs the logstash_kafka logstash plugin
 #
 class logstash_kafka::install(
   $version = $logstash_kafka::version,

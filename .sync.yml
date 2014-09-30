@@ -1,0 +1,10 @@
+---
+spec/spec_helper_acceptance.rb:
+  dependencies:
+    - puppetlabs-stdlib
+    - puppetlabs-java
+    - opentable-kafka
+    - elasticsearch/logstash
+    - electrical/lib-file_concat
+spec/acceptance/nodesets/windows-2008R2-serverstandard-x64.yml:
+  unmanaged: true

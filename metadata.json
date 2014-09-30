@@ -1,33 +1,31 @@
 {
-    "operatingsystem_support": [
-        { "operatingsystem": "Debian" },
-        { "operatingsystem": "Ubuntu" },
-        { "operatingsystem": "RedHat" },
-        { "operatingsystem": "CentOS" },
-        { "operatingsystem": "Windows" }
-    ],
-    "requirements": [
-        {
-            "name": "pe",
-            "version_requirement": "3.2.x"
-        },
-        {
-            "name": "puppet",
-            "version_requirement": "3.x"
-        }
-    ],
-    "name":         "opentable-logstash_kafka",
-    "version":      "0.1.4",
-    "source":       "git://github.com/opentable/puppet-logstash_kafka.git",
-    "author":       "opentable",
-    "summary":      "Module for managing the installation the kafka plugin for logstash",
-    "description":  "Install logstash-kafka plugin to allow you to use kafka as a input/output to/from logstash",
-    "project_page": "https://github.com/opentable/puppet-logstash_kafka",
-    "license":      "MIT",
-    "dependencies": [
-        {
-            "name": "puppetlabs/stdlib",
-            "version_requirement": ">= 3.0.0"
-        }
-    ]
+  "name":         "opentable-logstash_kafka",
+  "version":      "0.1.4",
+  "author":       "opentable",
+  "license":      "MIT",
+  "summary":      "A module for managing the installation the kafka plugin for logstash",
+  "source":       "https://github.com/opentable/puppet-logstash_kafka",
+  "project_page": "https://github.com/opentable/puppet-logstash_kafka",
+  "issue_url":    "https://github.com/opentable/puppet-logstash_kafka/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": ["5.0","6.0"]
+    },
+    { "operatingsystem": "CentOS",
+      "operatingsystemrelease": ["5.0","6.0"]
+    },
+    { "operatingsystem": "Debian",
+      "operatingsystemrelease": ["6.0","7.0"]
+    },
+    { "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": ["12.04","14.04"]
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.0.0 <5.0.0"
+    }
+  ]
 }

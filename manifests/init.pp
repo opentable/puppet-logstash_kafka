@@ -1,12 +1,21 @@
+# Author::    Liam Bennett  (mailto:lbennett@opentable.com)
+# Copyright:: Copyright (c) 2013 OpenTable Inc
+# License::   MIT
+
 # == Class: logstash_kafka
 #
 # The purpose of this module is to install the logstash-kafka plugin to logstash to enable it to be configured as a kafka consumer or producer.
+#
+# === Requirements/Dependencies
+#
+# Currently reequires the puppetlabs/stdlib module on the Puppet Forge in
+# order to validate much of the the provided configuration.
 #
 # === Parameters
 #
 # [*version*]
 #   The version of the the plugin to be installed.
-#
+# [*jruby_kafka_version*]
 # [*install_dir]
 #   The directory in which to install the plugin source
 #
@@ -18,6 +27,9 @@
 #
 # [*logstash_package_url*]
 #   If installing logstash at the same time as this plugin, the url to the logstash package
+#
+# === Examples
+#
 #
 class logstash_kafka(
   $version = $logstash_kafka::params::version,

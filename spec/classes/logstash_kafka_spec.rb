@@ -9,7 +9,8 @@ describe 'logstash_kafka' do
           :kernel          => 'Linux',
           :osfamily        => 'Debian',
           :operatingsystem => 'Ubuntu',
-          :lsbdistcodename => 'trusty'
+          :lsbdistcodename => 'trusty',
+          :architecture    => 'amd64'
       }}
 
       #it { should compile.with_all_deps }
@@ -39,7 +40,8 @@ describe 'logstash_kafka' do
       let(:facts) {{
           :kernel          => 'Linux',
           :osfamily        => 'RedHat',
-          :operatingsystem => 'CentOS'
+          :operatingsystem => 'CentOS',
+          :architecture    => 'amd64'
       }}
 
       #it { should compile.with_all_deps }
@@ -71,6 +73,7 @@ describe 'logstash_kafka' do
       let(:facts) {{
         :osfamily        => 'Solaris',
         :operatingsystem => 'Nexenta',
+        :architecture    => 'amd64'
       }}
 
       it { expect { should contain_package('logstash_kafka') }.to raise_error(Puppet::Error, /Nexenta not supported/) }

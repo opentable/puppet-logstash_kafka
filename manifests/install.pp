@@ -48,8 +48,7 @@ class logstash_kafka::install
   }
 
   exec { 'install-jruby-kafka':
-    command     => "/usr/bin/java -jar vendor/jar/jruby-complete-1.7.11.jar --1.9 ${logstash_kafka::install_dir}/gembag.rb ${logstash_kafka::install_dir}/logstash-kafka.gemspec",
-    cwd         => $logstash_kafka::logstash_install_dir,
+    command     => "/usr/bin/java -jar ${logstash_kafka::logstash_install_dir}/vendor/jar/jruby-complete-1.7.11.jar --1.9 ${logstash_kafka::install_dir}/gembag.rb ${logstash_kafka::install_dir}/logstash-kafka.gemspec",
     environment => 'GEM_HOME=vendor/bundle/jruby/1.9/ GEM_PATH= ',
     unless      => "/usr/bin/test -d ${logstash_kafka::logstash_install_dir}/vendor/bundle/jruby/1.9/gems/jruby-kafka-0.1.0"
   }

@@ -6,11 +6,12 @@ describe 'logstash_kafka' do
     describe "logstash_kafka class without any parameters on Debian" do
       let(:params) {{ }}
       let(:facts) {{
-          :kernel          => 'Linux',
-          :osfamily        => 'Debian',
-          :operatingsystem => 'Ubuntu',
-          :lsbdistcodename => 'trusty',
-          :architecture    => 'amd64'
+          :kernel                 => 'Linux',
+          :osfamily               => 'Debian',
+          :operatingsystem        => 'Ubuntu',
+          :operatingsystemrelease => '14.04',
+          :lsbdistcodename        => 'trusty',
+          :architecture           => 'amd64'
       }}
 
       #it { should compile.with_all_deps }
@@ -38,10 +39,11 @@ describe 'logstash_kafka' do
     describe "logstash_kafka class without any parameters on RedHat" do
       let(:params) {{ }}
       let(:facts) {{
-          :kernel          => 'Linux',
-          :osfamily        => 'RedHat',
-          :operatingsystem => 'CentOS',
-          :architecture    => 'amd64'
+          :kernel                 => 'Linux',
+          :osfamily               => 'RedHat',
+          :operatingsystem        => 'CentOS',
+          :operatingsystemrelease => '6',
+          :architecture           => 'amd64'
       }}
 
       #it { should compile.with_all_deps }

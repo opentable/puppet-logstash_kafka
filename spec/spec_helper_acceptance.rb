@@ -31,6 +31,14 @@ Spec.configure do |c|
       
 			on host, puppet('module','install', forge_repo, "puppetlabs-stdlib"), { :acceptable_exit_codes => [0,1] }
 	    
+			on host, puppet('module','install', forge_repo, "puppetlabs-java"), { :acceptable_exit_codes => [0,1] }
+	    
+			on host, puppet('module','install', forge_repo, "opentable-kafka"), { :acceptable_exit_codes => [0,1] }
+	    
+			on host, puppet('module','install', forge_repo, "elasticsearch/logstash"), { :acceptable_exit_codes => [0,1] }
+	    
+			on host, puppet('module','install', forge_repo, "electrical/lib-file_concat"), { :acceptable_exit_codes => [0,1] }
+	    
 	  end
   end
 end

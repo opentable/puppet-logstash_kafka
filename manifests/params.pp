@@ -1,6 +1,6 @@
 # == Class logstash_kafka::params
 #
-# This class is meant to be called from logstash_kafka
+# This private class is meant to be called from logstash_kafka
 # It sets variables according to platform
 #
 class logstash_kafka::params {

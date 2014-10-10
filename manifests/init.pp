@@ -30,6 +30,12 @@
 #
 # === Examples
 #
+# Installing the logstash-kafka plugin to a custom logstash installation:
+#
+#   logstash { 'version 0.5.1':
+#     version              => '0.5.1',
+#     logstash_install_dir => '/opt/custom_logstash_dir'
+#   }
 #
 class logstash_kafka(
   $version = $logstash_kafka::params::version,

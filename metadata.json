@@ -1,12 +1,13 @@
 {
   "name":         "opentable-logstash_kafka",
-  "version":      "0.1.4",
+  "version":      "1.0.0",
   "author":       "opentable",
   "license":      "MIT",
   "summary":      "A module for managing the installation the kafka plugin for logstash",
   "source":       "https://github.com/opentable/puppet-logstash_kafka",
   "project_page": "https://github.com/opentable/puppet-logstash_kafka",
   "issue_url":    "https://github.com/opentable/puppet-logstash_kafka/issues",
+  "tags": ["apache", "kafka", "logging", "logstash"],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",

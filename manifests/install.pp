@@ -37,7 +37,7 @@ class logstash_kafka::install
   }
 
   exec { 'download-logstash-kafka':
-    command => "/usr/bin/wget -O /tmp/logstash-kafka-v${logstash_kafka::version}.tar.gz https://codeload.github.com/joekiller/logstash-kafka/tar.gz/v${logstash_kafka::version}",
+    command => "/usr/bin/wget -O /tmp/logstash-kafka-v${logstash_kafka::version}.tar.gz ${logstash_kafka::repository}/v${logstash_kafka::version}",
     unless  => "/usr/bin/test -f /tmp/logstash-kafka-v${logstash_kafka::version}.tar.gz"
   }
 

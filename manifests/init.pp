@@ -51,7 +51,6 @@ class logstash_kafka(
   $logstash_package_url = $logstash_kafka::params::logstash_package_url
 ) inherits logstash_kafka::params {
 
-  validate_re($version,'^\d+\.\d+\.?\d*$',"${version} is not a valid semver version")
   validate_absolute_path($install_dir)
   validate_absolute_path($kafka_install_dir)
   validate_absolute_path($logstash_install_dir)

@@ -16,6 +16,10 @@
 # [*version*]
 #   The version of the the plugin to be installed.
 # [*jruby_kafka_version*]
+#
+# [*repository*]
+#   The the repoitory from where the source needs to be downloaded from.
+#
 # [*install_dir]
 #   The directory in which to install the plugin source
 #
@@ -39,6 +43,7 @@
 #
 class logstash_kafka(
   $version = $logstash_kafka::params::version,
+  $repository = $logstash_kafka::params::repository,
   $jruby_kafka_version = $logstash_kafka::params::jruby_kafka_version,
   $install_dir = $logstash_kafka::params::install_dir,
   $kafka_install_dir = $logstash_kafka::params::kafka_install_dir,
